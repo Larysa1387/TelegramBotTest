@@ -1,0 +1,84 @@
+/* конспект */
+
+table {
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+}
+
+td, th {
+  border: 1px solid black;
+}
+
+tr:hover {
+  background-color: tomato;
+  color: white;
+}
+
+.link {
+  color: teal;
+}
+
+.link:hover {
+  color: tomato;
+}
+
+.social-links .link {
+  color: teal;
+}
+
+.social-links .link:hover,
+.social-links .link:focus {
+  color: rgb(21, 180, 21);
+}
+
+  .social-links .link:active {
+  color: rgb(252, 236, 13);
+  }
+
+  .social-links .link:visited {
+  color: rgb(247, 46, 79);
+}
+
+/* Специфичность - 0 0 0 1 */
+/* p {
+  color: green;
+} */
+
+/* ✅ Специфичность - 0 0 0 2 */
+article > p {
+  color: orange;
+}
+
+/* Специфичность - 0 0 1 1 */
+.post > h1 {
+  color: red;
+}
+
+/* ✅ Специфичность - 0 0 2 0 */
+.post > .post-title {
+  color: orange;
+}
+
+/* Занятие 3 */
+/* 2. Для селектора p задайте свойство color и значение red, свойство font-size и значение 20px */
+p {
+color:red;
+font-size:20px;
+}
+
+/* 3.Для селектора * (любой элемент) задай
+свойство margin и значение 0, свойство padding и значение 0; */
+* {
+  margin:0;
+  padding:0;
+}
+
+/* 4. Для тега li отмени свойство  list-style с помощью значения none. Задай свойству color значение green;
+Убедись на примере изменения цвета текста, что у тега более высокий приоритет, чем у *. */
+* {
+  color: red;
+}
+
+li {
+  list-style:none;
+  color:green;
+}
