@@ -82,3 +82,86 @@ li {
   list-style:none;
   color:green;
 }
+
+/* 5. Для класса rule задай задай свойство
+list-style и значение upper-roman, свойство color и значение navy; */
+li {
+  list-style: none;
+  color: green;
+}
+
+ .rule {
+   list-style: upper-roman;
+  color: navy;
+}
+
+/* 6. Добавьте css правила для класса first-rule и last-rule
+под текстом с правилом для класса common-rule */
+.common-rule {
+  list-style: upper-roman;
+  font-size: 20px;
+}
+
+.first-rule {
+  color:red;
+}
+
+.last-rule {
+  color:green
+}
+
+/* 7. В css добавь класс active к селекторам button и link так, чтобы
+правило color: red применилось только к элементу button, содержащему одновременно класс btn и active;
+правило font-weight: 700 применилось только к элементу a, содержащему одновременно класс link и active. */
+.btn {
+  border: none;
+  padding: .25rem 1.25rem;
+}
+
+.link {
+  text-decoration: none;
+  color: navy;
+}
+/* Напиши свой код под этой строкой */
+.btn.active {
+  color: red;
+}
+
+.link.active {
+  font-weight: 700;
+}
+
+/* 8.Добавь псевдокласс :hover и :focus так, чтобы для класса link применялось свойство
+opacity: 1 при наведении курсора или получения фокуса с помощью клавиши tab  */
+.link {
+  text-decoration: none;
+  color: navy;
+  opacity: 0.5;
+}
+/* Напиши свой код под этой строкой */
+.link:hover,
+.link:focus {
+  opacity: 1;
+}
+
+/* 9.Для селектора в виде атрибута [type] задай свойство color со значением white.
+Повышаем специфичность. Для селектора в виде тега button и атрибута [type="reset"]
+задай свойство color со значением green */
+[type] {
+  color:white;
+}
+button[type="reset"] {
+  color:green;
+}
+
+/* 10. Для ссылок с атрибутом href, значение которых начинается с ./ задай цвет текста red.
+Для ссылок с атрибутом href, значение которых начинается с https задай цвет текста navy. */
+.link {
+  text-decoration: none;
+}
+[href^="./"]{
+  color:red;
+}
+[href^="https"]{
+  color:navy;
+}
