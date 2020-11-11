@@ -165,3 +165,71 @@ button[type="reset"] {
 [href^="https"]{
   color:navy;
 }
+
+/* 11. Селектор атрибута: символ $. Для атрибутов, заканчивающихся на html задай цвет текста green.
+Для атрибутов, заканчивающихся на css задай цвет текста orangered.
+Специфичность селекторов должна быть минимальной. */
+.link {
+  text-decoration: none;
+}
+
+[href$="html"] {
+  color:green;
+}
+
+[href$="css"] {
+  color:orangered;
+}
+
+/* 12.Селектор атрибута: символ *
+ Для атрибутов, содержащих about задай цвет текста green.
+Для атрибутов, содержащих com задай цвет текста orangered.
+Специфичность селекторов должна быть минимальной.*/
+.link {
+  text-decoration: none;
+}
+
+[href*="about"] {
+  color:green;
+}
+
+[href*="com"] {
+  color:orangered;
+}
+
+/* 13.Селекторы и вес селектора: id, приоритет 2-го ранга
+Добавь CSS правило с id селектором sending со свойством background-color и значением teal,
+со свойством color и значением white */
+.warning {
+  background-color: white;
+  color: red;
+}
+#sending {
+  background-color:teal;
+  color:white;
+}
+
+/* 14. Инлайн стили.
+Задайте элементу div инлайн стили
+
+<div class="warning" id="inline" style="background-color: orange; color: navy;">Инлайн стили
+нежелательно использовать из-за более высокого приоритета чем у id, а также из-за сложности
+c поддержкой и переиспользованем кода.</div>*/
+
+/* 15.!important, приоритет с повышением ранга селектора
+Добавь !important обеим значениям свойств селектора div */
+div {
+  background-color: navy !important;
+  color: white !important;
+}
+.warning {
+  background-color: white;
+  color: red;
+}
+#inline {
+  background-color: red;
+  color: white;
+}
+
+/* 16.
+ */
