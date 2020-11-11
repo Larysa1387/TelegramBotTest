@@ -301,3 +301,150 @@ ul {
 .last-of-type {
   color:firebrick;
 }
+/* 22. Т.к. цвет текста для ссылок не наследуется,
+то задай ссылке цвет green, используя класс в качестве селектора */
+.list {
+  padding-left: 0;
+  list-style: none;
+  color: green;
+}
+.list-link {
+  color:green;
+}
+
+/* 23. Подключение CSS файлов к странице. Подключите в правильном порядке файлы стилей, расположенных в папке css:
+css/modern-normalize.css
+css/style.css */
+/* Сначала обязательно это: <link rel="stylesheet" href="css/modern-normalize.css">
+   потом это <link rel="stylesheet" href="css/style.css"> */
+
+/* 24. В формате rgb, используя только значения от 0 до 255:
+задай классу box белый цвет текста и черный фон
+задай классу red максимально красный фон
+задай классу green максимально зеленый фон
+задай классу blue максимально синий фон */
+.box {
+	color:rgb(255,255,255);
+  background-color:rgb(0,0,0);
+}
+
+.red {
+	background-color: rgb(255,0,0);
+}
+
+.green {
+	background-color: rgb(0,255,0);
+}
+
+.blue {
+	background-color: rgb(0,0,255);
+}
+
+/* 25. В сокращенном hex формате
+задай классу box белый цвет текста и черный фон;
+задай классу red максимально красный фон;
+задай классу green максимально зеленый фон;
+задай классу blue максимально синий фон. */
+.box {
+	color: #fff;
+  	background-color: #000;
+}
+
+.red {
+	background-color: #f00;
+}
+
+.green {
+	background-color: #0f0;
+}
+
+.blue {
+	background-color: #00f;
+}
+
+/* 26. Сделай цвет текста контрастным - добавь белый цвет в формате hsl для классов
+lightness-25 и lightness-0 */
+.lightness {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0.5rem;
+    text-align: center;
+    border: 1px solid gold;
+}
+.lightness-100 {
+    background-color: hsl(0, 100%, 100%);
+}
+.lightness-75 {
+    background-color: hsl(0, 100%, 75%);
+}
+.lightness-50 {
+    background-color: hsl(0, 100%, 50%);
+}
+.lightness-25 {
+    background-color: hsl(0, 100%, 25%);
+  	color: hsl(0,0%,100%)
+}
+.lightness-0 {
+    background-color: hsl(0, 100%, 0%);
+    color: hsl(0,0%,100%);
+}
+
+/* 27. Задай свойство opacity селекторам .opacity:hover и .opacity:focus так, чтобы прозрачность отсутствовала.
+Задай свойству background-color селекторам .transparent:hover и .transparent:focus значение - именованный цвет прозрачности. */
+.container {
+    padding: 1rem;
+    background-color: navy;
+  }
+
+  .box {
+    width: 200px;
+    height: 50px;
+    margin: 1rem auto;
+    color: #fff;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    background-color: orchid;
+    border: 4px solid gold;
+  }
+
+  .opacity {
+    opacity: .5;
+  }
+
+.opacity:hover,
+.opacity:focus {
+ 	opacity: 1;
+}
+
+.transparent:hover,
+.transparent:focus {
+	background-color:transparent;
+}
+
+/* 28. Задай свойству background-color селектору [data-color="rgba"]:hover значение - полупрозрачный цвет в формате rgba вместо заданного в формате rgb.
+Задай свойству background-color селектору [data-color="hsla"]:hover значение - полупрозрачный цвет в формате hsla вместо заданного в формате hsl.
+Задай свойству background-color селектору [data-color="hexa"]:hover значение - полупрозрачный цвет в формате hexa вместо заданного в формате hex. */
+[data-color] {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  background-color: #008;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+[data-color="rgba"]:hover {
+  background-color: rgba(0, 0, 136, .5);
+}
+
+
+[data-color="hsla"]:hover {
+  background-color: hsla(240, 100%, 27%, .5);
+}
+
+
+[data-color="hexa"]:hover {
+  background-color: #00008a80;
+}
